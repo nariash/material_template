@@ -10,12 +10,12 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <!-- Normalize -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 		<!-- Libs Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<link rel="stylesheet" href="css/vendor/materialize.min.css">
+		<link rel="stylesheet" href="css/vendor/animate.min.css">
 		
 		<!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400" rel="stylesheet">
@@ -32,53 +32,279 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-		<nav>
+	<header>
+		<nav class="animated fadeInDown">
 			<div class="nav-wrapper">
-		      <a href="javascript:void(0)" class="brand-logo">Logo</a>
-		      <a href="javascript:void(0)" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-		      <ul class="right hide-on-med-and-down">
-		        <li><a href="javascript:void(0)">SECRETARÍA VIRTUAL</a></li>
-		        <li><a href="javascript:void(0)">CALENDARIO</a></li>
-		        <!-- Dropdown Trigger -->
-      			<li><a class="dropdown-button" href="#!" data-activates="menu-herramientas">HERRAMIENTAS<i class="material-icons right">arrow_drop_down</i></a>
-      				<!-- Dropdown Structure -->
-					<ul id="menu-herramientas" class="dropdown-content include" data-include="template_parts/menu-herramientas.html">
-
+				<div class="container">
+					<a href="javascript:void(0)" class="brand-logo">Logo</a>
+					<a href="javascript:void(0)" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>					
+					<ul class="menu right hide-on-med-and-down">
+						<li class="separator"><a href="javascript:void(0)">SECRETARÍA VIRTUAL</a></li>
+						<li class="separator"><a href="javascript:void(0)">CALENDARIO</a></li>
+						<!-- Dropdown Trigger -->
+						<li class="separator"><a class="dropdown-button" href="#!" data-activates="menu-herramientas">HERRAMIENTAS<i class="material-icons right">arrow_drop_down</i></a>
+							<!-- Dropdown Structure -->
+							<ul id="menu-herramientas" class="dropdown-content include" data-include="template_parts/menu-herramientas.html"></ul>
+						</li>
+						<li><a href="javascript:void(0)">MAPA DE PROGRESO</a></li>
+						<li class="user">
+							<div class="valign-wrapper">
+								<i class="material-icons">perm_identity</i>
+								<span class="valign">Hola <span class="nombre">Guillermo</span></span>
+							</div>
+						</li>
 					</ul>
-      			</li>
-		        <li><a href="javascript:void(0)">MAPA DE PROGRESO</a></li>		        
-		      </ul>
-		      <ul class="side-nav collapsible collapsible-accordion" id="mobile-demo">
-		        <li><a href="javascript:void(0)">SECRETARÍA VIRTUAL</a></li>
-		        <li><a href="javascript:void(0)">CALENDARIO</a></li>
-      			<li><a class="collapsible-header waves-effect waves-teal" href="#!">HERRAMIENTAS<i class="material-icons right">arrow_drop_down</i></a>
-					<ul class="collapsible-body include" data-include="template_parts/menu-herramientas.html">
-					  
-					</ul>
-      			</li>
-		        <li><a href="javascript:void(0)">MAPA DE PROGRESO</a></li>
-		      </ul>
+				</div>
 		    </div>
 		</nav><!-- Nav -->
+	</header>
+	
+	<aside>
+		<ul class="menu side-nav collapsible collapsible-accordion" id="mobile-demo">
+			<li><a href="javascript:void(0)">SECRETARÍA VIRTUAL</a></li>
+			<li><a href="javascript:void(0)">CALENDARIO</a></li>
+			<li><a class="collapsible-header waves-effect waves-teal" href="#!">HERRAMIENTAS<i class="material-icons right">arrow_drop_down</i></a>
+				<ul class="collapsible-body include" data-include="template_parts/menu-herramientas.html">
 
-        <div class="container">
-			<div class="row">
-			<div class="col s12 m6">
-			<div class="card blue-grey darken-1">
-			<div class="card-content white-text">
-			<span class="card-title">Card Title</span>
-			<p>I am a very simple card. I am good at containing small bits of information.
-			I am convenient because I require little markup to use effectively.</p>
-			</div>
-			<div class="card-action">
-			<a href="javascript:void(0)">This is a link</a>
-			<a href="javascript:void(0)">This is a link</a>
-			</div>
-			</div>
-			</div>
-			</div>
-        </div>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0)">MAPA DE PROGRESO</a></li>
+		</ul>
+	</aside>
 
+    <section id="semestres" class="container">
+		<div class="row">
+
+				<div id="semestre-1" class="semestre active col s12 m6">
+
+					<span class="semestre-title">SEMESTRE&nbsp1&nbsp<i class="material-icons tiny">grade</i></span>
+
+					<div class="asignatura animated fadeInDown a01">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									INTRODUCCIÓN AL MAGISTER
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S1</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura animated fadeInDown a02">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									BASES METODOLÓGICAS DE LA ERGONOMÍA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S1</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura animated fadeInDown a03">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									FISIOLOGÍA DEL TRABAJO
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S1</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura animated fadeInDown a04">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S1</span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div id="semestre-2" class="semestre col s12 m2">
+
+					<span class="semestre-title">SEMESTRE&nbsp2&nbsp<i class="material-icons tiny">grade</i></span>
+
+					<div class="asignatura animated fadeInDown a01">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S2</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura animated fadeInDown a02">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S2</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura animated fadeInDown a03">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S2</span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div id="semestre-3" class="semestre block col s12 m2">
+
+					<span class="semestre-title">SEMESTRE&nbsp3&nbsp<i class="material-icons tiny">grade</i></span>
+
+					<div class="asignatura block animated fadeInDown a01">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S3</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura block animated fadeInDown a02">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S3</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura block animated fadeInDown a03">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S3</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura block animated fadeInDown a04">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S3</span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div id="semestre-4" class="semestre block col s12 m2">
+
+					<span class="semestre-title">SEMESTRE&nbsp5&nbsp<i class="material-icons tiny">grade</i></span>
+
+					<div class="asignatura block animated fadeInDown a01">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S4</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura block animated fadeInDown a02">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S4</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="asignatura block animated fadeInDown a03">
+						<a href="#!">
+							<div class="card z-depth-2">
+								<div class="col s4 card-title">
+									<h6 class="white-text">
+									ANTROPOMETRÍA Y BIOMECÁNICA
+									</h6>
+								</div>
+								<div class="col s8 offset-s4 card-image" style="background-image: url(images/demo/images.jpg)">
+									<span class="badge">S4</span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+		</div>
+    </section>
+
+    <footer>
+    	
+    </footer>
 
         <!-- Libs JS -->
         <script src="js/vendor/jquery.min.js"></script>

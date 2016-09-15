@@ -1,6 +1,275 @@
 html, body {
 	font-family: 'Fira Sans', sans-serif;
 }
+header {
+	padding-top: 8px;
+	background-color: #347BC5;
+}
+/**
+ * nav
+ */
 nav {
 	background-color: #3C3C3E;
+	position: relative;
+	z-index: 9;
+	/*border-top: 8px solid #347BC5;*/
 }
+nav .nav-wrapper .menu > .separator:after /*li:not(:last-child):after*/ {
+	content: '';
+	display: inline-block;
+	border-right: solid 1px #0096D9;
+	height: 15px;
+	float: right;
+	position: relative;
+    top: -40px;
+}
+nav .nav-wrapper .menu .user {
+	padding: 16px 0px;
+	overflow-x: hidden;
+}
+nav .nav-wrapper .menu .user .valign-wrapper {
+	background-color: #2C2C2D;
+	color: #666666;
+	height: 32px;
+    padding: 0px 10px;
+    border-right: solid 5px #0A71B3;
+}
+nav .nav-wrapper .menu .user .valign-wrapper:after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: #0A71B3;
+	position: relative;
+	right: -15px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+nav .nav-wrapper .menu .user .valign-wrapper .material-icons {
+	height: 32px;
+	line-height: 32px;
+}
+
+/**
+ * semestres
+ */
+#semestres {
+	padding-top: 25px;
+	background-color: #FFFFFF;
+}
+#semestres .semestre {
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+/**
+ * semestre-title
+ */
+#semestres .semestre .semestre-title {
+	width: 100%;
+	display: block;
+	background-color: #0096D9;
+	color: #FFFFFF;
+	padding: 0 0 0 1rem;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+#semestres .semestre.block .semestre-title {
+	background-color: #6F7072;
+}
+#semestres .semestre.active .semestre-title {
+	width: calc(33.3333333333% - 3px);
+}
+#semestres .semestre .semestre-title .material-icons {
+	display: inline;
+	background-color: #0A71B3;
+	float: right;
+    padding: 3px;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+#semestres .semestre.block .semestre-title .material-icons {
+	background-color: #9B9C9E;
+}
+/**
+ * card
+ */
+#semestres .semestre .asignatura a .card {
+	padding: 0px;
+	background-color: #0A71B3;
+	height: 150px;
+	padding-right: 10px;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+#semestres .semestre .asignatura.block a .card {
+	background-color: #6F7072;
+	background-position: center center;
+}
+/**
+ * card-title
+ */
+#semestres .semestre .asignatura a .card .card-title {
+	font-size: 1rem;
+	color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .5rem;
+}
+#semestres .semestre .asignatura a .card .card-title h6 {
+	
+}
+/**
+ * card-image
+ */
+#semestres .semestre .asignatura a .card .card-image {
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+#semestres .semestre.active .asignatura a .card .card-image {
+	display: block;
+}
+/**
+ * badge
+ */
+#semestres .semestre .asignatura a .card .card-image .badge {
+	min-width: 2rem;
+	width: 2rem;
+	line-height: 2rem;
+	right: inherit;
+	left: -2rem;
+	background-color: #0096D9;
+	color: #FFFFFF;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+#semestres .semestre.block .asignatura a .card .card-image .badge, 
+#semestres .semestre .asignatura.block a .card .card-image .badge {
+	background-color: #9B9C9E;
+}
+
+/**
+ * PSEUDO CLASES
+ */
+#semestres .semestre:not(.active) .asignatura a .card {
+	padding-right: 0;
+}
+#semestres .semestre:not(.block):not(.active):hover .semestre-title {
+	background-color: #E25B00;
+}
+#semestres .semestre:not(.block):not(.active):hover .semestre-title .material-icons {
+	background-color: #BD0926;
+}
+#semestres .semestre:not(.block):not(.active):hover a .card, 
+#semestres .semestre .asignatura:not(.block) a:hover .card {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background-color: #E25B00;
+}	
+#semestres .semestre:not(.active) .asignatura a .card .card-title {
+	width: 100%;
+}
+#semestres .semestre:not(.active) .asignatura a .card .card-image .badge {
+	left: inherit;
+	right: 0;
+}
+#semestres .semestre:not(.block) .asignatura:not(.block) a:hover .card .card-image .badge, 
+#semestres .semestre:not(.block):not(.active):hover a .card .card-image .badge {
+	background-color: #BD0926;
+}
+
+/**
+ * footer
+ */
+footer {
+	width: 100%;
+	height: 15px;
+	background-color: #347BC5;	
+}
+
+
+/**
+ * ANIMATIONS
+ */
+.animated.a01 {
+  animation-delay: .5s;
+}
+.animated.a02 {
+  animation-delay: 1.0s;
+}
+.animated.a03 {
+  animation-delay: 1.5s;
+}
+.animated.a04 {
+  animation-delay: 2.0s;
+}
+
+
+/* Material Design Adaptive Breakpoints */
+/*
+Below you'll find CSS media queries based on the breakpoint guidance
+published by the Material Design team. You can choose to use, customise
+or remove these breakpoints based on your needs.
+http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
+*/
+
+	/* mobile-small */
+	@media all and (min-width: 0) and (max-width: 599px) and (orientation: portrait) {
+		#semestres .semestre.active .semestre-title {
+			width: 100%;
+		}
+		#semestres .semestre.block .asignatura a .card .card-image {
+			-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    		filter: grayscale(100%);
+		}
+	}
+	/* mobile-large */
+	@media all and (min-width: 361px) and (orientation: portrait) {  }
+	/* mobile-small-landscape */
+	@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) { }
+	/* mobile-large-landscape */
+	@media all and (min-width: 481px) and (orientation: landscape) { }
+	/* tablet-small-landscape */
+	@media all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape) { }
+	/* tablet-large-landscape */
+	@media all and (min-width: 961px) and (orientation: landscape) { }
+	/* tablet-small */
+	@media all and (min-width: 600px) and (orientation: portrait) { }
+	/* tablet-large */
+	@media all and (min-width: 601px) and (max-width: 840px) and (orientation : portrait) { }
+	/* desktop-x-small-landscape */
+	@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) { }
+	/* desktop-x-small */
+	@media all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3) { }
+	/* desktop-small-landscape */
+	@media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) { }
+	/* desktop-small */
+	@media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) { }
+	/* desktop-medium-landscape */
+	@media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) { }
+	/* desktop-medium */
+	@media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) { }
+	/* desktop-large */
+	@media all and (min-width: 1281px) and (max-width: 1600px) { }
+	/* desktop-xlarge */
+	@media all and (min-width: 1601px) and (max-width: 1920px) { }
+
+	@media all and (min-width: 600px) {
+		#semestres .semestre:not(.active) .asignatura a .card .card-image {
+			width: 100%;
+			background-image: none !important;
+			margin-left: 0;
+		}		
+	}
