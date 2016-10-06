@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+		<!-- Libs Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<link rel="stylesheet" href="css/vendor/materialize.min.css">
+		<link rel="stylesheet" href="css/vendor/animate.min.css">
+		
+		<!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400" rel="stylesheet">
+
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="css/main.css"> 
+        <link rel="stylesheet" href="css/course.css"> 
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+	<header>
+		<nav class="darken animated fadeInDown a01">
+			<div class="nav-wrapper">
+				<div class="container">
+					<a href="javascript:void(0)" class="brand-logo">Logo</a>
+					<!-- <a href="javascript:void(0)" class="brand-logo"><img src="images/logos/ergonomia.jpg" alt="Ergonomía"></a> -->
+					<a href="javascript:void(0)" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>					
+					<ul class="menu right hide-on-med-and-down">
+						<li class="separator"><a href="javascript:void(0)">SECRETARÍA VIRTUAL</a></li>
+						<li class="separator"><a href="javascript:void(0)">CALENDARIO</a></li>
+						<!-- Dropdown Trigger -->
+						<li class="separator"><a class="dropdown-button" href="#!" data-activates="menu-herramientas">HERRAMIENTAS<i class="material-icons right">arrow_drop_down</i></a>
+							<!-- Dropdown Structure -->
+							<ul id="menu-herramientas" class="dropdown-content include" data-include="template_parts/menu-herramientas.html"></ul>
+						</li>
+						<li><a href="javascript:void(0)">MAPA DE PROGRESO</a></li>
+						<li class="user">
+							<div class="valign-wrapper">
+								<i class="material-icons">perm_identity</i>
+								<span class="valign">Hola <span class="nombre">Guillermo</span></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+		    </div>
+		</nav><!-- Nav -->
+		<nav class="lighten animated fadeInDown a02">
+			<div class="nav-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="backnext col s6 m2">
+							<a href="javascript:window.history.back();"><i class="material-icons blue-dark">chevron_left</i></a>
+							<a href="javascript:window.history.forward();"><i class="material-icons blue-dark">chevron_right</i></a>
+						</div>
+						<div class="bread col m10 hide-on-med-and-down">
+							<a href="index.html" class="breadcrumb">INICIO</a>
+							<a href="#!" class="breadcrumb tooltipped" data-tooltip="FISIOLOGÍA DEL TRABAJO">ASIGNATURA</a>
+							<a href="#!" class="breadcrumb tooltipped" data-tooltip="CAPACIDAD FÍSICA DE TRABAJO">UNIDAD</a>
+							<a href="#!" class="breadcrumb tooltipped" data-tooltip="APTITUD FÍSICA">TEMA</a>
+							<span class="breadcrumb tooltipped short" data-tooltip="ESTIMACIÓN INDIRECTA DE LA CAPACIDAD AERÓBICA MEDIANTE PRUEBAS DE ESFUERZO MÁXIMAS">ESTIMACIÓN INDIRECTA DE LA CAPACIDAD AERÓBICA MEDIANTE PRUEBAS DE ESFUERZO MÁXIMAS</span>
+						</div>
+						<!-- <div class="user col s6 hide-on-med-and-up">
+							<div class="valign-wrapper">
+								<i class="material-icons">perm_identity</i>
+								<span class="valign">Hola <span class="nombre">Guillermo</span></span>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<aside>
+		<ul class="menu side-nav collapsible collapsible-accordion" id="mobile-demo">
+			<li>
+				<div class="userView">
+					<img class="background" src="images/demo/paisaje.jpg">
+					<a href="#!user"><img src="images/demo/avatar.jpg" class="circle"></a>
+					<a href="#!name"><span class="white-text name">Guillermo Ceballos</span></a>
+					<a href="#!email"><span class="white-text email">gceballos@cfrd.cl</span></a>
+				</div>
+			</li>
+			<li><a href="javascript:void(0)">SECRETARÍA VIRTUAL</a></li>
+			<li><a href="javascript:void(0)">CALENDARIO</a></li>
+			<li><a class="collapsible-header waves-effect waves-teal" href="#!">HERRAMIENTAS<i class="material-icons right">arrow_drop_down</i></a>
+				<ul class="collapsible-body include" data-include="template_parts/menu-herramientas.html">
+
+				</ul>
+			</li>
+			<li><a href="javascript:void(0)">MAPA DE PROGRESO</a></li>
+		</ul>
+	</aside>
+
+	<section id="curso" class="container">
+		<div class="row">
+
+				<div class="card col m10 offset-m1 grey animated fadeInDown a01">
+					<div class="card-conten">
+						<div class="row informacion">
+							<nav class="grey-dark">
+								<ul class="menu">
+									<li class="separator"><a href="#!"><i class="material-icons inline">my_location</i><span class="hide-on-small-only">Objetivos</span></li></a>
+									<li class="separator"><a href="#!"><i class="material-icons">description</i><span class="hide-on-small-only">Descripción asignatura</span></li></a>
+									<li class="separator"><a href="#!"><i class="material-icons">date_range</i><span class="hide-on-small-only">Calendario de Asignatura</span></li></a>
+									<li><a href="#!"><i class="material-icons">assignment</i><span class="hide-on-small-only">Tareas</span></li></a>
+								</ul>
+							</nav>    						
+						</div>
+						<div class="row unidades">
+							<!-- <div class="unidades"> -->
+								<div class="col m3 s12 animated fadeIn a02">
+									<a href="" class="unidad">
+										<h5 class="header">UNIDAD.01</h5>
+										<p class="title">SISTEMA TRANSPORTADOR DE OXÍGENO</p>
+									</a>
+								</div>
+								<div class="col m3 s12 animated fadeIn a03">
+									<a href="" class="unidad">
+										<h5 class="header">UNIDAD.02</h5>
+										<p class="title">METABOLISMO</p>
+									</a>
+								</div>
+								<div class="col m3 s12 animated fadeIn a04">
+									<a href="" class="unidad">
+										<h5 class="header">UNIDAD.03</h5>
+										<p class="title">CAPACIDAD FÍSICA DE TRABAJO</p>
+									</a>
+								</div>
+								<div class="col m3 s12 animated fadeIn a05">
+									<a href="" class="unidad">
+										<h5 class="header">UNIDAD.04</h5>
+										<p class="title">ALIMENTACIÓN</p>
+									</a>
+								</div>
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+
+		</div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+        <!-- Libs JS -->
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/vendor/materialize.min.js"></script>
+        <script src="https://use.fontawesome.com/63b69c9ad0.js"></script>
+        <script src="js/vendor/jquery-scrollto.js"></script>
+        <script src="js/vendor/jquery.zoomooz.js"></script>
+
+        <!-- Custom JS -->
+        <script src="js/main.js"></script>
+        <script src="js/course.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <!-- <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
+    </body>
+</html>
