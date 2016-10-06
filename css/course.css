@@ -1,0 +1,63 @@
+#curso .informacion .menu {
+	display: flex;
+	justify-content: center;
+}
+#curso .informacion .menu li .material-icons {
+	float: left;
+	line-height: 64px;
+	margin-right: 10px;
+}
+#curso .informacion .menu .separator:after {
+	border-right-color: #FFFFFF;
+	height: 25px;
+	top: -45px;
+}
+#curso .unidades .unidad {
+	background-color: #0A71B3;
+	color: #FFFFFF;
+	padding: 5px;
+}
+#curso .unidades .unidad.active,
+#curso .unidades .unidad:hover, 
+#curso .unidades .unidad:focus {
+	background-color: #E25B00;
+}
+#curso .unidades .unidad .header {
+
+}
+#curso .unidades .unidad .title {
+	margin: 0px;
+}
+
+/* Material Design Adaptive Breakpoints */
+/*
+Below you'll find CSS media queries based on the breakpoint guidance
+published by the Material Design team. You can choose to use, customise
+or remove these breakpoints based on your needs.
+http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
+*/
+
+	/* mobile-small */
+	@media all and (min-width: 0) and (max-width: 599px) and (orientation: portrait) {
+		#curso .unidades .unidad {
+			display: block;
+		}
+	}
+	@media all and (min-width: 600px) {
+		#curso .unidades {
+			width:80%;
+			margin: 100px auto;
+			display: flex;
+		}
+		#curso .unidades .unidad {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		#curso .unidades .unidad .header {
+			flex-grow: 1;
+		}
+		#curso .unidades .unidad .title {
+			flex-grow: 0;
+		}
+	}

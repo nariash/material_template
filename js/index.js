@@ -1,17 +1,25 @@
 $(document).ready(function(){
-	$(".button-collapse").sideNav();
-	$(".dropdown-button").dropdown();
 
-	$('.include').each(function(){
-		$(this).load( $(this).data('include') );
-	})
-
-	$('#semestres').on('click', '.semestre:not(.block):not(.active)', function(){
+	$('#semestres').on('click', '.semestre:not(.block):not(.active)', function(e){
+		e.preventDefault();
+		var semestre = $(this);
 		$('.semestre.active').removeClass('active m6').addClass('m2')
-		$(this).removeClass('m2').addClass('active m6')
+		semestre.removeClass('m2').addClass('active m6')
+		if ($(window).width() < 600) { console.log(semestre)
+			$('html, body').animate({
+				scrollTop: semestre.offset().top
+			}, 1000);
+			
+			/*setTimeout(function(){
+				semestre.ScrollTo();
+			},300)*/
+		}
 	});
 
-	/*$('.semestre').each(function(i){
-		$(this).prepend( $('<span />',{'text':'SEMESTRE'}) )
-	})*/
+
+
 });
+
+$(document).keydown(function(e) { });
+$(document).keyup(function(e) { });
+$(document.body).on('mousewheel', function(e){ });
